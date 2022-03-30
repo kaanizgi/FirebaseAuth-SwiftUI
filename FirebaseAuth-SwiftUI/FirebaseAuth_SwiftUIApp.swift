@@ -15,7 +15,7 @@ struct FirebaseAuth_SwiftUIApp: App {
        }
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RegisterView()
         }
     }
 }

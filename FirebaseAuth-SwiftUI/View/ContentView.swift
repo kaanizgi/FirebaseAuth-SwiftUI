@@ -25,22 +25,8 @@ struct ContentView: View {
                 .frame(height:225)
                 .frame(maxWidth:.infinity)
                 .padding(.vertical)
-            HStack {
-                Image(systemName: "mail")
-                TextField("Mail", text: $mail)
-                    .frame(height:50)
-                    .cornerRadius(16)
-            }
-            Divider()
-            
-            HStack {
-                Image(systemName: "pencil")
-                
-                SecureField("Password", text: $password)
-                    .frame(height:50)
-                    .cornerRadius(16)
-            }
-            Divider()
+           TextFields(binding: $mail, placeholder: "Mail Input", image: "mail")
+           SecureTextFields(password: $password, image: "pencil", placeholder: "Password Input")
             
             Button {
                 ViewModel.Login(email: mail.lowercased(), password: password)

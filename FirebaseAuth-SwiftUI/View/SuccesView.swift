@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SuccesView: View {
     
-    @ObservedObject private var ViewModel = LoginViewModel()
+    @ObservedObject private var ViewModel = LogoutViewModel()
     var body: some View {
         NavigationView {
             VStack {

@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		FF2E5CE527F4A02A0080882D /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E5CE427F4A02A0080882D /* RegisterView.swift */; };
+		FF57D0D127F4A0B900BE2F77 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57D0D027F4A0B900BE2F77 /* ImagePicker.swift */; };
+		FF57D0D327F4A0EB00BE2F77 /* LogoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57D0D227F4A0EB00BE2F77 /* LogoutViewModel.swift */; };
+		FF57D0D527F4A14800BE2F77 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57D0D427F4A14800BE2F77 /* RegisterViewModel.swift */; };
+		FF57D0D927F4A47800BE2F77 /* TextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57D0D827F4A47800BE2F77 /* TextFields.swift */; };
+		FF57D0DB27F4A64800BE2F77 /* SecureTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57D0DA27F4A64800BE2F77 /* SecureTextFields.swift */; };
 		FF6085FD27F43D8900EB4E33 /* FirebaseAuth_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6085FC27F43D8900EB4E33 /* FirebaseAuth_SwiftUIApp.swift */; };
 		FF6085FF27F43D8900EB4E33 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6085FE27F43D8900EB4E33 /* ContentView.swift */; };
 		FF60860127F43D8B00EB4E33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF60860027F43D8B00EB4E33 /* Assets.xcassets */; };
@@ -23,6 +28,11 @@
 
 /* Begin PBXFileReference section */
 		FF2E5CE427F4A02A0080882D /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		FF57D0D027F4A0B900BE2F77 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		FF57D0D227F4A0EB00BE2F77 /* LogoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewModel.swift; sourceTree = "<group>"; };
+		FF57D0D427F4A14800BE2F77 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		FF57D0D827F4A47800BE2F77 /* TextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFields.swift; sourceTree = "<group>"; };
+		FF57D0DA27F4A64800BE2F77 /* SecureTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureTextFields.swift; sourceTree = "<group>"; };
 		FF6085F927F43D8900EB4E33 /* FirebaseAuth-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FirebaseAuth-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF6085FC27F43D8900EB4E33 /* FirebaseAuth_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuth_SwiftUIApp.swift; sourceTree = "<group>"; };
 		FF6085FE27F43D8900EB4E33 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,6 +58,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FF57D0CF27F4A0A900BE2F77 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FF57D0D027F4A0B900BE2F77 /* ImagePicker.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FF57D0D727F4A46800BE2F77 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FF57D0D827F4A47800BE2F77 /* TextFields.swift */,
+				FF57D0DA27F4A64800BE2F77 /* SecureTextFields.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		FF6085F027F43D8900EB4E33 = {
 			isa = PBXGroup;
 			children = (
@@ -68,9 +95,10 @@
 		FF6085FB27F43D8900EB4E33 /* FirebaseAuth-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				FF57D0D727F4A46800BE2F77 /* Components */,
+				FF57D0CF27F4A0A900BE2F77 /* Helpers */,
 				FF60861727F4467400EB4E33 /* ViewModel */,
 				FF60860D27F4457F00EB4E33 /* View */,
-				FF60860C27F4456500EB4E33 /* Components */,
 				FF6085FC27F43D8900EB4E33 /* FirebaseAuth_SwiftUIApp.swift */,
 				FF60860027F43D8B00EB4E33 /* Assets.xcassets */,
 				FF60860227F43D8B00EB4E33 /* Preview Content */,
@@ -84,13 +112,6 @@
 				FF60860327F43D8B00EB4E33 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		FF60860C27F4456500EB4E33 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 		FF60860D27F4457F00EB4E33 /* View */ = {
@@ -107,6 +128,8 @@
 			isa = PBXGroup;
 			children = (
 				FF60861827F4468500EB4E33 /* LoginViewModel.swift */,
+				FF57D0D227F4A0EB00BE2F77 /* LogoutViewModel.swift */,
+				FF57D0D427F4A14800BE2F77 /* RegisterViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -193,7 +216,12 @@
 			files = (
 				FFDC619727F49CD9005C8BDF /* SuccesView.swift in Sources */,
 				FF2E5CE527F4A02A0080882D /* RegisterView.swift in Sources */,
+				FF57D0D327F4A0EB00BE2F77 /* LogoutViewModel.swift in Sources */,
+				FF57D0D527F4A14800BE2F77 /* RegisterViewModel.swift in Sources */,
 				FF60861927F4468500EB4E33 /* LoginViewModel.swift in Sources */,
+				FF57D0D927F4A47800BE2F77 /* TextFields.swift in Sources */,
+				FF57D0DB27F4A64800BE2F77 /* SecureTextFields.swift in Sources */,
+				FF57D0D127F4A0B900BE2F77 /* ImagePicker.swift in Sources */,
 				FF6085FF27F43D8900EB4E33 /* ContentView.swift in Sources */,
 				FF6085FD27F43D8900EB4E33 /* FirebaseAuth_SwiftUIApp.swift in Sources */,
 			);

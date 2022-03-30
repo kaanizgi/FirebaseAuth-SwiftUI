@@ -12,7 +12,7 @@ class LoginViewModel:ObservableObject {
     
     
     @Published var isTrue = false
-    @Published var goBack = false
+    
     
     func Login(email:String,password:String) {
         Auth.auth().signIn(withEmail: email, password: password) { data, error in
@@ -22,13 +22,5 @@ class LoginViewModel:ObservableObject {
                 self.isTrue = true
             }
         }
-    }
-    
-    func Logout() {
-        do {
-            try Auth.auth().signOut()
-            self.goBack = true
-        }
-          catch { print("already logged out") }
     }
 }
