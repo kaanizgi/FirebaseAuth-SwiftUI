@@ -12,6 +12,7 @@ class LoginViewModel:ObservableObject {
     
     
     @Published var isTrue = false
+    @Published var goRegister = false
     
     
     func Login(email:String,password:String) {

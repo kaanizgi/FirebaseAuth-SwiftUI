@@ -14,7 +14,6 @@ struct ContentView: View {
     @State var mail = ""
     @State var password = ""
     
-    
     var body: some View {
         VStack {
             Text("Sign In")
@@ -25,14 +24,14 @@ struct ContentView: View {
                 .frame(height:225)
                 .frame(maxWidth:.infinity)
                 .padding(.vertical)
-           TextFields(binding: $mail, placeholder: "Mail Input", image: "mail")
-           SecureTextFields(password: $password, image: "pencil", placeholder: "Password Input")
+            TextFields(binding: $mail, placeholder: "Mail Input", image: "mail")
+            SecureTextFields(password: $password, image: "pencil", placeholder: "Password Input")
             
             Button {
                 ViewModel.Login(email: mail.lowercased(), password: password)
             } label: {
                 Text("Sign In")
-                    .font(.title2).bold()
+                    .font(.title3).bold()
                     .foregroundColor(.white)
                     .frame(height: 50)
                     .frame(maxWidth:.infinity)
@@ -42,6 +41,14 @@ struct ContentView: View {
             .background(.blue)
             .cornerRadius(16)
             Spacer()
+            Button {
+                ViewModel.goRegister = true
+            } label: {
+                Text("Register Screen")
+                    .font(.title3)
+            }.sheet(isPresented: $ViewModel.goRegister) {
+                RegisterView()
+            }
         }
         .padding(.vertical,35)
         .padding(.horizontal)

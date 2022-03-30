@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct SuccesView: View {
     
-    @ObservedObject private var ViewModel = LogoutViewModel()
+    @ObservedObject private var ViewModel = SuccesViewModel()
     var body: some View {
         NavigationView {
             VStack {
@@ -20,11 +21,15 @@ struct SuccesView: View {
             .navigationTitle("Succes Screen")
             .navigationBarTitleDisplayMode(.inline)
             .navigationViewStyle(.stack)
+            .navigationBarItems(leading:
+                                    WebImage(url: URL(string: ViewModel.UserPp)).resizable().frame(width: 50, height: 50)
+                .clipShape(Circle())
+            )
             .navigationBarItems(trailing:
             Button(action: {
                 ViewModel.Logout()
             }, label: {
-                Text("Log Out")})
+                Text(ViewModel.Name)})
             )
         }
     }

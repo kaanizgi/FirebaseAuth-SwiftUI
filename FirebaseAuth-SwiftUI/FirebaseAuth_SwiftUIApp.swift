@@ -15,7 +15,11 @@ struct FirebaseAuth_SwiftUIApp: App {
        }
     var body: some Scene {
         WindowGroup {
-            RegisterView()
+            if Auth.auth().currentUser == nil {
+                ContentView()
+            }else {
+                SuccesView()
+            }
         }
     }
 }
