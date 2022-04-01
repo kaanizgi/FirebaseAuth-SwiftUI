@@ -31,16 +31,15 @@ struct ContentView: View {
                 ViewModel.Login(email: mail.lowercased(), password: password)
             } label: {
                 Text("Sign In")
-                    .font(.title3).bold()
-                    .foregroundColor(.white)
-                    .frame(height: 50)
-                    .frame(maxWidth:.infinity)
-            }.fullScreenCover(isPresented: $ViewModel.isTrue) {
-                SuccesView()
-            }
-            .background(.blue)
-            .cornerRadius(16)
+            }.buttonStyle(MainButtonStyle())
+                .fullScreenCover(isPresented: $ViewModel.isTrue) {
+                    SuccesView()
+                }
+                .alert(ViewModel.Error, isPresented: $ViewModel.ShowAlert) {
+                    Button("OK", role: .cancel) { }
+                }
             Spacer()
+            
             Button {
                 ViewModel.goRegister = true
             } label: {
@@ -50,8 +49,7 @@ struct ContentView: View {
                 RegisterView()
             }
         }
-        .padding(.vertical,35)
-        .padding(.horizontal)
+        .padding()
     }
 }
 
@@ -60,3 +58,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+

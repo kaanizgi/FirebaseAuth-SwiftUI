@@ -13,7 +13,7 @@ class SuccesViewModel:ObservableObject {
     @Published var goBack = false
     @Published var Name = ""
     @Published var UserPp = ""
-        
+    
     
     init() {
         getUser()
@@ -25,7 +25,7 @@ class SuccesViewModel:ObservableObject {
             try Auth.auth().signOut()
             self.goBack = true
         }
-          catch { print("already logged out") }
+        catch { print("already logged out") }
     }
     
     func getUser () {

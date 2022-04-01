@@ -22,14 +22,13 @@ struct SuccesView: View {
             .navigationBarTitleDisplayMode(.inline)
             .navigationViewStyle(.stack)
             .navigationBarItems(leading:
-                                    WebImage(url: URL(string: ViewModel.UserPp)).resizable().frame(width: 50, height: 50)
-                .clipShape(Circle())
-            )
+                                    ProfileImage(imageUrl: ViewModel.UserPp))
             .navigationBarItems(trailing:
-            Button(action: {
+                                    Button(action: {
                 ViewModel.Logout()
             }, label: {
-                Text(ViewModel.Name)})
+                Text(ViewModel.Name)}
+                                )
             )
         }
     }

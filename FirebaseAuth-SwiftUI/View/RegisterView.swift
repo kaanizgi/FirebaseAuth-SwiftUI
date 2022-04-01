@@ -48,13 +48,8 @@ struct RegisterView: View {
                 ViewModel.Register(mail: mail, password: password, name: name, image: image)
             } label: {
                 Text("Register")
-                    .font(.title3).bold()
-                    .foregroundColor(.white)
-                    .frame(height: 50)
-                    .frame(maxWidth:.infinity)
-            }
-            .background(.blue)
-            .cornerRadius(16)
+               
+            }.buttonStyle(MainButtonStyle())
             Spacer()
         }
         .padding()
